@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <title>Roulette</title>
+ </head>
+
+ <body>
+     <p>Сколько денякк?:</p>
+     <div>
+     <input type="number" id="refill">
+     <button class="start" onclick="addButtonClick()">Пополнить</button>
+     </div>
+     <p>Баланс:</p>
+     <div id="balance"></div>
+     <p>Ставка:</p>
+     <input type="number" id="userBet">
+     <div class="choiceColor">
+     <input type="radio" name="color" value="red"> Red 
+     <input type="radio" name="color" value="black"> Black
+     <input type="radio" name="color" value="green"> Green  
+     <input type="radio" name="color" value="blue">  Blue
+     <input type="radio" name="color" value="orange"> Orange <br> 
+     </div>
+     <button class="start"  onclick="runRoulette()">Играем</button>
+     <p>Победил:</p>
+     <div class="winner"></div>
+
+
+     <script src="main.js"></script>
+ </body>
+</html>
+
+ 
