@@ -4,6 +4,7 @@ const arrColor = ["Red", "Black", "Green", "Blue", "Orange"]
 const balanceInput = document.getElementById('balance');
 const refillInput = document.getElementById('refill');
 const enteredBet = document.getElementById('userBet');
+const selectColor = document.getElementsByName('color')
 
 function addButtonClick() {
     balance += Number(refillInput.value)
@@ -12,8 +13,7 @@ function addButtonClick() {
 }
 
 function runRoulette() {
-    let choiceColor = document.choiceColor.color.value
-    console.log(choiceColor)
+
 }
 
 function userBetLose() {
@@ -31,6 +31,14 @@ function userBetWinner() {
 function RandomElement() {
     let rand = Math.floor(Math.random() * arrColor.length)
     return arrColor[rand]
+}
+
+function userSelectColor() {
+    for(let i = 0; i < selectColor.length; i++) {
+        if(selectColor[i].checked){
+            return arrColor[i]
+        }
+    }
 }
 
 function updateUI() {
