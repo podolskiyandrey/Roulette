@@ -13,7 +13,9 @@ function addButtonClick() {
 }
 
 function runRoulette() {
-
+    if(randomElement() === userSelectColor()){
+        return userBetWinner()
+    } return userBetLose()
 }
 
 function userBetLose() {
@@ -28,7 +30,7 @@ function userBetWinner() {
     updateUI()    
 }
 
-function RandomElement() {
+function randomElement() {
     let rand = Math.floor(Math.random() * arrColor.length)
     return arrColor[rand]
 }
@@ -45,5 +47,3 @@ function updateUI() {
     balanceInput.value = balance
     document.getElementById('balance').innerHTML = balance
 }
-
-
