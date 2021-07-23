@@ -13,10 +13,10 @@ function addButtonClick() { //пополняем баланс
 }
 
 function runRoulette() { //сравниваем предполагаемый и выигрышный цвет
-    winnerColor = randomElement()
-    selectedColor = userSelectColor()
+    let winnerColor = randomElement()
+    let selectedColor = userSelectColor()
     document.getElementById('winner').innerHTML = winnerColor
-    return (winnerColor === selectColor) ? userBetWinner() : userBetLose()
+    return (winnerColor === selectedColor) ? userBetWinner() : userBetLose()
 }
 
 function userBetLose() { //поведение при проигрыше
